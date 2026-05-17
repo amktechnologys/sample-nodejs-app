@@ -33,7 +33,7 @@ jobs:
           name: Push Docker Image
           command: |
             docker tag gitops-demo:latest \
-            662252246197.dkr.ecr.us-east-1.amazonaws.com/gitops-demo/gitops-demo:latest
+            662252246197.dkr.ecr.us-east-1.amazonaws.com/gitops-demo:latest
 
             docker push \
-            662252246197.dkr.ecr.us-east-1.amazonaws.com/gitops-demo/gitops-demo:latest
+            662252246197.dkr.ecr.us-east-1.amazonaws.com/gitops-demo:latest
