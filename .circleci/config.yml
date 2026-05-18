@@ -19,7 +19,7 @@ jobs:
       - run:
           name: Build Docker Image
           command: |
-            docker build -t gitops-demo .
+            docker build -t gitops-demo:1.0 .
 
       - run:
           name: Login to ECR
@@ -32,8 +32,8 @@ jobs:
       - run:
           name: Push Docker Image
           command: |
-            docker tag gitops-demo:latest \
-            662252246197.dkr.ecr.us-east-1.amazonaws.com/gitops-demo:latest
+            docker tag gitops-demo:1.0 \
+            662252246197.dkr.ecr.us-east-1.amazonaws.com/gitops-demo:1.0
 
             docker push \
-            662252246197.dkr.ecr.us-east-1.amazonaws.com/gitops-demo:latest
+            662252246197.dkr.ecr.us-east-1.amazonaws.com/gitops-demo:1.0
